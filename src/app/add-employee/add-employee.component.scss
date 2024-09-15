@@ -1,0 +1,144 @@
+
+label{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: -1%;
+}
+input{
+font-size: 18px;
+}
+
+.container-fluid{
+    background: linear-gradient(78deg, rgba(15,61,193,1) 22%, rgba(245,7,8,1) 79%);
+    
+}
+.card{
+    left: 350px;
+    top:70px;
+    background-color: rgba(148, 148, 148, 0.877);
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px rgba(173, 216, 230, 0.753);
+    animation: slideRight 2s ease-out;
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 1.75rem auto 0;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: rgb(0, 242, 255);
+    overflow: hidden;
+    filter: hue-rotate(340deg);
+    transition: all 0.5s ease;
+  }
+  
+  .btn:hover {
+    color: #071952;
+    background: rgb(23, 194, 203);
+    box-shadow: 0 0 4px rgb(23, 194, 203), 0 0 20px rgb(23, 194, 203),
+      0 0 40px rgb(23, 194, 203), 0 0 60px rgb(23, 194, 203);
+    -webkit-box-shadow: 0 0 4px rgb(23, 194, 203), 0 0 20px rgb(23, 194, 203),
+      0 0 40px rgb(23, 194, 203), 0 0 60px rgb(23, 194, 203);
+    -moz-box-shadow: 0 0 4px rgb(23, 194, 203), 0 0 20px rgb(23, 194, 203),
+      0 0 40px rgb(23, 194, 203), 0 0 60px rgb(23, 194, 203);
+    -webkit-box-reflect: below -4px linear-gradient(transparent, #ffc7ea);
+  }
+  span {
+    display: block;
+    position: absolute;
+  }
+  
+  span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    right: 0;
+    background: linear-gradient(270deg, transparent, rgb(23, 194, 203));
+    animation: animate1 1s linear infinite;
+  }
+  
+  @keyframes animate1 {
+    0% {
+      right: -100%;
+    }
+    50%,
+    100% {
+      right: 100%;
+    }
+  }
+  
+  span:nth-child(2) {
+    width: 2px;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: linear-gradient(180deg, transparent, rgb(23, 194, 203));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+  
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+  
+  span:nth-child(3) {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, transparent, rgb(23, 194, 203));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes animate3 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+  
+  span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    bottom: -100%;
+    right: 0;
+    background: linear-gradient(360deg, transparent, rgb(23, 194, 203));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  
+  @keyframes animate4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
+  

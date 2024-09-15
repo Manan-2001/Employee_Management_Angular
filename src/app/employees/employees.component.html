@@ -1,0 +1,87 @@
+<!-- <div class="container">
+  <h2 style="text-align: center;">Employee Information<br><br></h2>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr style="background-color: rgb(130, 253, 167);">
+        <th>EmployeeID</th>
+        <th>Employee Name</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Employee of employees">
+        <td>{{ Employee.id }}</td>
+        <td>{{ Employee.name }}</td>
+        <td>{{ Employee.email }}</td>
+        <td>{{ Employee.salary }}</td>
+        <td>
+          <button
+            class="btn btn-warning" 
+            (click)="update(Employee.id)"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal"
+          >
+            Update
+          </button>
+        </td>
+        <td>
+          <button
+            class="btn btn-danger"
+            (click)="Delete(Employee.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+ -->
+
+
+ <body>
+  <br><br>
+  <div class="container">
+    
+      <div class="card" style="--clr: #009688" *ngFor="let Employee of employees">
+          <div class="img-box">
+              <video src="/assets/Employee.webm" [autoplay]="true" [loop]="true"></video>
+          </div>
+          <div class="content">
+              <h2>{{Employee.name}}</h2><br>
+              <p>
+                Name: {{Employee.name}}<br>
+                Id: {{ Employee.id }}<br>
+                Email: {{ Employee.email }}<br>
+                Salary: {{ Employee.salary }}<br>
+              </p>
+<br><br>
+
+              <div class="row">
+                <div class="col-lg">
+                  <button
+                  class="btn btn-outline-primary"  style="font-size: 15px; padding: 5%;"
+                  (click)="update(Employee.id)"
+                >Update</button> 
+                </div>
+                <div class="col-lg">
+                  <button
+                  class="btn btn-outline-danger"  style="font-size: 15px; padding: 5%;"
+            (click)="Delete(Employee.id)"
+          >
+            Delete
+          </button>
+                </div>
+              </div>
+              <!-- <a >Read More</a> -->
+              
+            
+          </div>
+      </div>
+     
+  </div>
+</body>

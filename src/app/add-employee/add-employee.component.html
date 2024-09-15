@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="card" style="width: 400px;">
+    <div class="card-body"> 
+      <img src="assets/Add_Employee.gif" alt="Add Employee GIF" width="200" style="margin-left: 24%;">
+
+
+      <form class="form-horizontal"  style="padding: 10%; ">
+      <div class="form-group">
+        <label class="control-label " for="name">Name:</label>
+        
+          <input type="text"  class="form-control" [(ngModel)]="employee.name" name="name" placeholder="Enter Name"  [style.background-color]="employee.name ? 'rgba(173, 230, 173, 0.76)' : 'rgba(230, 180, 173, 0.76)'">
+      
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="email">Email:</label>
+        
+          <input type="email" required="*@gmail.com" class="form-control" name="email" [(ngModel)]="employee.email" [style.background-color]="employee.email ? 'rgba(173, 230, 173, 0.76)' : 'rgba(230, 180, 173, 0.76)'" placeholder="Enter Email">
+        
+      </div>
+      <div class="form-group">
+          <label class="control-label" for="salary">Salary:</label>
+          
+            <input type="number"  class="form-control" [(ngModel)]="employee.salary" name="salary" [style.background-color]="employee.salary ? 'rgba(173, 230, 173, 0.76)' : 'rgba(230, 180, 173, 0.76)'" placeholder="Enter Salary"> 
+          
+        </div>
+      <div class="form-group">
+        <div style="text-align: center;">
+          <h6 style="color: rgb(202, 0, 0);font-size: 18px;" *ngIf="isValidate">*All fields are Mandatory fields</h6>
+
+          <a (click)="onSubmit()" class="btn" >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            {{btnLabel}}
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
+ <br> <br> <br> <br> <br> <br> <br>
+</div>
